@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CozyNest | Home Decor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #26352c;
+      background: #faf8f3;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    header a {
+      color: #26352c;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      min-height: 430px;
+      padding: 75px 8%;
+      display: flex;
+      align-items: center;
+      background: #e8e9df;
+    }
+
+    .hero-content {
+      max-width: 520px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #304c3b;
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .section {
+      padding: 55px 8%;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      margin-bottom: 28px;
+      color: #687269;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+    }
+
+    .product {
+      background: white;
+      padding-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px #00000008;
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #eee;
+    }
+
+    .product h3,
+    .product p,
+    .product button {
+      margin: 12px 16px 0;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    .product button {
+      padding: 11px 15px;
+      background: #304c3b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .about {
+      background: #eeeae1;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #26352c;
+      color: white;
+      text-align: center;
+      padding: 28px 8%;
+      line-height: 1.8;
+    }
+
+    #cart-message {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #26352c;
+      color: white;
+      padding: 15px;
+      border-radius: 6px;
+      display: none;
+      max-width: 280px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">CozyNest.</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p>MAKE YOUR SPACE FEEL LIKE HOME</p>
+      <h1>Small Details.<br>Beautiful Living.</h1>
+      <p>
+        Discover thoughtfully selected home decor pieces
+        to make every corner feel special.
+      </p>
+      <a class="button" href="#products">Explore Collection</a>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <h2>Our Collection</h2>
+    <p class="intro">Simple pieces. A more beautiful home.</p>
+
+    <div class="products">
+
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80"
+             alt="Decorative lighting" loading="lazy">
+        <h3>Ambient Lighting</h3>
+        <p>Warm lighting for your favourite space.</p>
+        <p class="price">Price coming soon</p>
+        <button onclick="showMessage('Ambient Lighting')">Discover Item</button>
+      </article>
+
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=600&q=80"
+             alt="Decorative vase" loading="lazy">
+        <h3>Modern Vases</h3>
+        <p>Elegant accents for your living room.</p>
+        <p class="price">Price coming soon</p>
+        <button onclick="showMessage('Modern Vases')">Discover Item</button>
+      </article>
+
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80"
+             alt="Modern home decor" loading="lazy">
+        <h3>Home Accents</h3>
+        <p>Little touches that change a room.</p>
+        <p class="price">Price coming soon</p>
+        <button onclick="showMessage('Home Accents')">Discover Item</button>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>Welcome to CozyNest</h2>
+    <p>
+      We believe a beautiful home is created through the little things.
+      Our goal is to help you discover decor that makes your space
+      feel comfortable, personal and welcoming.
+    </p>
+  </section>
+
+  <footer id="contact">
+    <h2>CozyNest.</h2>
+    <p>Make yourself at home.</p>
+    <p>Contact: Add your business email before launching.</p>
+    <p>&copy; 2026 CozyNest. All rights reserved.</p>
+  </footer>
+
+  <div id="cart-message" role="status" aria-live="polite"></div>
+
+  <script>
+    function showMessage(product) {
+      const message = document.getElementById("cart-message");
+      message.textContent =
+        product + " selected. Product pricing and ordering will be available after setup.";
+      message.style.display = "block";
+
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 3500);
+    }
+  </script>
+
+</body>
+</html>
